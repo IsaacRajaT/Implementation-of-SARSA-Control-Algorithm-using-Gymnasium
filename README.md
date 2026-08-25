@@ -21,7 +21,7 @@ Implement the SARSA (State-Action-Reward-State-Action) control algorithm in the 
 
 
 ## Environment Description
-The experiment uses a custom 4 × 4 FrozenLake-v1 environment consisting of frozen states, a starting state, a goal state, and hole states. The map used is ["FSFF", "FFFH", "FGHF", "HFFH"]. The environment contains 16 states and 4 actions, where the actions are Left, Down, Right, and Up. The agent receives a reward of 1 for reaching the goal and 0 for other transitions. The environment is configured with is_slippery=False, so the agent moves deterministically in the selected direction.
+The experiment uses a custom 4 × 4 FrozenLake-v1 environment consisting of frozen states, a starting state, a goal state, and hole states. The map used is ["FFFS", "FFFH", "FGHF", "HFFH"]. The environment contains 16 states and 4 actions, where the actions are Left, Down, Right, and Up. The agent receives a reward of 1 for reaching the goal and 0 for other transitions. The environment is configured with is_slippery=False, so the agent moves deterministically in the selected direction.
 
 ## Theory
 
@@ -85,7 +85,7 @@ import gymnasium as gym
 import numpy as np
 import matplotlib.pyplot as plt
 custom_map = [
-    "FSFF",
+    "FFFS",
     "FFFH",
     "FGHF",
     "HFFH"
@@ -248,15 +248,15 @@ env.close()
 
 ```
 Final Q-table:
-[[0.789 0.822 0.899 0.75 ]
- [0.852 0.927 0.853 0.895]
- [0.897 0.806 0.582 0.698]
- [0.742 0.    0.237 0.367]
- [0.821 0.802 0.95  0.762]
- [0.902 1.    0.9   0.889]
- [0.949 0.    0.    0.738]
+[[0.766 0.801 0.897 0.728]
+ [0.847 0.948 0.84  0.889]
+ [0.893 0.842 0.798 0.849]
+ [0.849 0.    0.802 0.796]
+ [0.822 0.743 0.94  0.743]
+ [0.888 1.    0.879 0.883]
+ [0.95  0.    0.    0.806]
  [0.    0.    0.    0.   ]
- [0.625 0.    1.    0.627]
+ [0.541 0.    1.    0.508]
  [0.    0.    0.    0.   ]
  [0.    0.    0.    0.   ]
  [0.    0.    0.    0.   ]
@@ -266,8 +266,8 @@ Final Q-table:
  [0.    0.    0.    0.   ]]
 
 Estimated State-Value Function:
-[[0.899 0.927 0.897 0.742]
- [0.95  1.    0.949 0.   ]
+[[0.897 0.948 0.893 0.849]
+ [0.94  1.    0.95  0.   ]
  [1.    0.    0.    0.   ]
  [0.    0.    0.    0.   ]]
 
@@ -278,7 +278,7 @@ Learned Policy:
  ['L' 'L' 'L' 'L']]
 
 
-Average reward over last 1000 episodes: 1.0
+Average reward over last 1000 episodes: 0.984
 ```
 
 
