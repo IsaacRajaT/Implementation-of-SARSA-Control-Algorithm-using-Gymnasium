@@ -80,8 +80,7 @@ $$
 
 
 ## Python Program
-
-```python
+```
 import gymnasium as gym
 import numpy as np
 import matplotlib.pyplot as plt
@@ -243,14 +242,10 @@ plt.grid(True)
 plt.show()
 
 env.close()
-
-
 ```
----
 
 ## Output
 
-```text
 Final Q-table:
 [[0.789 0.822 0.899 0.75 ]
  [0.852 0.927 0.853 0.895]
@@ -285,20 +280,15 @@ Learned Policy:
 Average reward over last 1000 episodes: 1.0
 
 
-```
 
----
 
 ## Result
-```text
-The SARSA algorithm successfully learned the action-value function after 10,000 training episodes. The learned Q-table provided suitable action values for navigating through the FrozenLake environment. The resulting policy directs the agent toward the goal while avoiding the hole states. The average reward over the last 1000 episodes was 1.0, indicating that the agent consistently reached the goal after training.
-```
 
----
+The SARSA algorithm successfully learned the action-value function after 10,000 training episodes. The learned Q-table provided suitable action values for navigating through the FrozenLake environment. The resulting policy directs the agent toward the goal while avoiding the hole states. The average reward over the last 1000 episodes was 1.0, indicating that the agent consistently reached the goal after training.
+
 
 ## Inference
-```text
+
 The experiment shows that SARSA can effectively learn an optimal policy through repeated interaction with the environment. The epsilon-greedy strategy allows the agent to explore different actions initially and gradually exploit the actions with higher Q-values. Since SARSA updates the Q-value using the action actually selected in the next state, it is an on-policy reinforcement learning algorithm. The final reward of 1.0 confirms that the trained agent successfully learned a reliable path to the goal.
-```
----
+
 
