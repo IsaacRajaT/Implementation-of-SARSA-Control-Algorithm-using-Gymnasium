@@ -246,6 +246,7 @@ env.close()
 
 ## Output
 
+```
 Final Q-table:
 [[0.789 0.822 0.899 0.75 ]
  [0.852 0.927 0.853 0.895]
@@ -278,7 +279,7 @@ Learned Policy:
 
 
 Average reward over last 1000 episodes: 1.0
-
+```
 
 
 
